@@ -17,7 +17,6 @@ func (game *Game) Loop() {
 }
 
 func (game *Game) battleTurn() {
-	game.turn.PrintLists()
 	game.turn.HeroesTurn()
 	game.turn.MonstersTurn()
 	PrintVerticalSpacing()

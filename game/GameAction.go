@@ -1,7 +1,6 @@
 package game
 
 import (
-	"fmt"
 	"os"
 
 	"hello.go.game/characters"
@@ -78,7 +77,7 @@ func (action *GameAction) updateTargetGroupStatus(targetAttacked *characters.Npc
 
 func (action *GameAction) defeatTarget(target *characters.Npc, targetGroup *[]*characters.Npc) {
 	PrintDefeatedText(target)
-	lists.RemoveNpcFromList(target, targetGroup) //erro aqui: não tá atualizando a referencia pq é passagem por valor e não ponteiro para
+	lists.RemoveNpcFromList(target, targetGroup)
 }
 
 func (action *GameAction) checkIfTargetGroupIsAlive() {
@@ -93,16 +92,4 @@ func (action *GameAction) endBattle(winner string) {
 	PrintVerticalSpacing()
 	PrintEndOfBattleText(winner)
 	os.Exit(0)
-}
-
-func (action *GameAction) PrintLists() {
-	fmt.Println("Heroes List:")
-	for _, hero := range *action.heroes {
-		fmt.Println(hero)
-	}
-
-	fmt.Println("Monsters List:")
-	for _, monster := range *action.monsters {
-		fmt.Println(monster)
-	}
 }

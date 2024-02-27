@@ -23,7 +23,3 @@ func (turn *GameTurn) MonstersTurn() {
 	PrintTurnText("Monsters")
 	turn.gameAction.MonstersAction()
 }
-
-func (turn *GameTurn) PrintLists() {
-	turn.gameAction.PrintLists()
-}
