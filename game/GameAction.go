@@ -78,7 +78,7 @@ func (action *GameAction) updateTargetGroupStatus(targetAttacked *characters.Npc
 
 func (action *GameAction) defeatTarget(target *characters.Npc, targetGroup *[]*characters.Npc) {
 	PrintDefeatedText(target)
-	lists.RemoveNpcFromListPtr(target, targetGroup) //erro aqui: não tá atualizando a referencia pq é passagem por valor e não ponteiro para
+	lists.RemoveNpcFromList(target, targetGroup) //erro aqui: não tá atualizando a referencia pq é passagem por valor e não ponteiro para
 }
 
 func (action *GameAction) checkIfTargetGroupIsAlive() {
