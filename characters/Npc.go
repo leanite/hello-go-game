@@ -43,6 +43,10 @@ func (npc Npc) GetMagicPower() int {
 	return npc.MagicPower
 }
 
+func (npc Npc) GetAttackPower() int {
+	return npc.AttackPower
+}
+
 func (npc *Npc) Attack(target *Npc) int {
 	return target.takeDamage(npc.calculateAttackDamage(), etc.PHYSICAL)
 }

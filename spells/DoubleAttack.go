@@ -37,5 +37,5 @@ func (da DoubleAttack) Equal(other Spell) bool {
 }
 
 func (da DoubleAttack) CalculateSpellDamage(caster SpellCaster) int {
-	return numbers.Round(float32(caster.GetMagicPower()) * da.SpellModifier)
+	return numbers.Round(float32(caster.GetAttackPower()) * da.SpellModifier)
 }
